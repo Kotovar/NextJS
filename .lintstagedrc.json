@@ -1,0 +1,7 @@
+{
+  "*.{ts,tsx}": [
+    "prettier --write",
+    "eslint --ignore-pattern .gitignore --fix",
+    "bash -c tsc --noEmit"
+  ]
+}
