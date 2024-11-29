@@ -1,8 +1,7 @@
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 
 export interface TagProps extends ComponentPropsWithoutRef<'div'> {
   size?: 's' | 'm';
-  children: ReactNode;
   color?: 'ghost' | 'red' | 'gray' | 'green' | 'primary';
   href?: string;
 }

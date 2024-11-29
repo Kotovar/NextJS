@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
-export interface HtagProps {
+export interface HtagProps extends PropsWithChildren {
   tag: 'h1' | 'h2' | 'h3';
-  children: ReactNode;
 }
