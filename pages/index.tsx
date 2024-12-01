@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 
-function Home({ menu }: HomeProps) {
+function Home() {
   const [rating, setRating] = useState(4);
 
   return (
@@ -34,11 +34,6 @@ function Home({ menu }: HomeProps) {
         green
       </Tag>
       <Rating rating={rating} isEditable={true} setRating={setRating}></Rating>
-      <ul>
-        {menu.map(m => (
-          <li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-        ))}
-      </ul>
     </>
   );
 }
