@@ -1,4 +1,4 @@
-import { Button, Htag, P, Rating, Tag } from '@/components';
+import { Button, Htag, Input, P, Rating, Tag, Textarea } from '@/components';
 import { withLayout } from '@/layout/Layout';
 import { GetStaticProps } from 'next';
 import { useState } from 'react';
@@ -34,6 +34,8 @@ function Home() {
         green
       </Tag>
       <Rating rating={rating} isEditable={true} setRating={setRating}></Rating>
+      <Input placeholder='Тест' />
+      <Textarea placeholder='Тест' />
     </>
   );
 }

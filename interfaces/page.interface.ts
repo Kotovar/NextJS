@@ -12,16 +12,16 @@ export interface TopPageModel {
   alias: string;
   title: string;
   category: string;
-  seoText: string;
+  seoText?: string;
   tagsTitle: string;
   metaTitle: string;
   metaDescription: string;
   firstCategory: TopLevelCategory;
-  advantages: TopPageAdvantage[];
+  advantages?: TopPageAdvantage[];
   createdAt: string;
   updatedAt: string;
   __v: number;
-  hh: HhData;
+  hh?: HhData;
   qas: unknown[];
   addresses: unknown[];
   categoryOn: string;
@@ -42,7 +42,7 @@ interface Blog {
   views: number;
   _id: string;
 }
-interface HhData {
+export interface HhData {
   count: number;
   juniorSalary: number;
   middleSalary: number;
@@ -50,7 +50,7 @@ interface HhData {
   updatedAt: string;
   _id: string;
 }
-interface TopPageAdvantage {
+export interface TopPageAdvantage {
   title: string;
   description: string;
   _id: string;
