@@ -24,7 +24,7 @@ export interface ProductModel {
   reviewAvg?: number;
   disadvantages?: string;
 }
-interface ReviewModel {
+export interface ReviewModel {
   _id: string;
   name: string;
   title: string;
