@@ -20,7 +20,7 @@ export const TopPageComponent = ({
     }
   );
 
-  const y = useScrollY();
+  // const y = useScrollY();
   const setSort = (sort: SortEnum) => {
     dispatchSort({ type: sort });
   };
@@ -31,7 +31,6 @@ export const TopPageComponent = ({
 
   return (
     <div className={styles.wrapper}>
-      {y}
       <div className={styles.title}>
         <Htag tag='h1'>{page.title}</Htag>
         {products && (

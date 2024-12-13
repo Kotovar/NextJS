@@ -1,4 +1,3 @@
-import type { ReviewFormProps } from '../../.idea/ReviewForm.props';
 import styles from './ReviewForm.module.css';
 import cn from 'classnames';
 import { Input } from '../Input/Input';
@@ -11,6 +10,7 @@ import { IReviewForm, IReviewSentResponse } from './ReviewForm.interface';
 import axios from 'axios';
 import { API } from '@/helpers/api';
 import { useState } from 'react';
+import { ReviewFormProps } from './ReviewForm.props';
 
 export const ReviewForm = ({
   productId,

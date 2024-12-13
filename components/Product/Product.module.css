@@ -141,15 +141,9 @@
   border-bottom: 1px dashed var(--gray-light);
 }
 
-.closed {
-  max-height: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.opened {
-  max-height: auto;
+.reviews {
   padding: 30px;
+  overflow: hidden;
 }
 
 .rateTitle a {
