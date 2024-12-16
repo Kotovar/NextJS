@@ -44,6 +44,13 @@ export const Menu = () => {
     }
   };
 
+  const openSecondLevelKey = (key: KeyboardEvent, secondCategory: string) => {
+    if (key.code === 'Space' || key.code === 'Enter') {
+      key.preventDefault();
+      openSecondLevel(secondCategory);
+    }
+  };
+
   const buildFirstLevel = () => {
     return (
       <>
@@ -80,6 +87,10 @@ export const Menu = () => {
           return (
             <div key={m._id.secondCategory}>
               <div
+                tabIndex={0}
+                onKeyDown={(key: KeyboardEvent) =>
+                  openSecondLevelKey(key, m._id.secondCategory)
+                }
                 className={styles.secondLevel}
                 onClick={() => openSecondLevel(m._id.secondCategory)}
               >
@@ -92,7 +103,7 @@ export const Menu = () => {
                 initial={m.isOpen ? 'visible' : 'hidden'}
                 animate={m.isOpen ? 'visible' : 'hidden'}
               >
-                {buildThirdLevel(m.pages, menuItem.route)}
+                {buildThirdLevel(m.pages, menuItem.route, m.isOpen ?? false)}
               </motion.div>
             </div>
           );
@@ -101,11 +112,16 @@ export const Menu = () => {
     );
   };
 
-  const buildThirdLevel = (pages: PageItem[], route: string) => {
+  const buildThirdLevel = (
+    pages: PageItem[],
+    route: string,
+    isOpened: boolean
+  ) => {
     return pages.map(p => (
       <motion.div key={p._id} variants={variantsChildren}>
         <Link href={`/${route}/${p.alias}`} legacyBehavior>
           <a
+            tabIndex={isOpened ? 0 : -1}
             className={cn(styles.thirdLevel, {
               [styles.thirdLevelActive]:
                 `/${route}/${p.alias}` === router.asPath,

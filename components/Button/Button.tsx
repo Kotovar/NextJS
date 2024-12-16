@@ -2,6 +2,7 @@ import type { ButtonProps } from './Button.props';
 import styles from './Button.module.css';
 import cn from 'classnames';
 import ArrowIcon from './arrow.svg';
+import { motion } from 'framer-motion';
 
 export const Button = ({
   appearance,
@@ -11,7 +12,8 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
       className={cn(styles.button, className, {
         [styles.primary]: appearance === 'primary',
         [styles.ghost]: appearance === 'ghost',
@@ -28,6 +30,6 @@ export const Button = ({
           <ArrowIcon />
         </span>
       )}
-    </button>
+    </motion.button>
   );
 };

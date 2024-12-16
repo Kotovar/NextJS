@@ -11,27 +11,27 @@
     "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
-    "axios": "^1.7.8",
+    "axios": "^1.7.9",
     "classnames": "^2.5.1",
-    "motion": "^11.14.1",
-    "next": "15.0.3",
+    "motion": "^11.14.4",
+    "next": "15.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.54.0"
+    "react-hook-form": "^7.54.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.16",
+    "@types/react-dom": "^18.3.5",
     "date-fns": "^4.1.0",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.1.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "stylelint": "^16.10.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "stylelint": "^16.12.0",
     "stylelint-config-recess-order": "^5.1.1",
     "stylelint-config-standard": "^36.0.1",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   }
 }
