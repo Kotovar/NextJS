@@ -62,7 +62,7 @@ export const Rating = forwardRef(function Rating(
           onClick={() => onClick(i + 1)}
           tabIndex={computeFocus(rating, i)}
           onKeyDown={handleKey}
-          ref={r => ratingArrayRef.current?.push(r)}
+          // ref={r => ratingArrayRef.current?.push(r)}
           role={isEditable ? 'slider' : ''}
           aria-valuenow={rating}
           aria-valuemax={5}

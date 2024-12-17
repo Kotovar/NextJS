@@ -7,6 +7,7 @@ import { FunctionComponent, useRef, useState } from 'react';
 import { AppContextProvider, IAppContext } from '@/context/app.context';
 import { Up } from '@/components';
 import cn from 'classnames';
+import type { KeyboardEvent } from 'react';
 
 const Layout = ({ children }: LayoutProps) => {
   const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState(false);
@@ -25,7 +26,7 @@ const Layout = ({ children }: LayoutProps) => {
       <a
         onFocus={() => setIsSkipLinkDisplayed(true)}
         onKeyDown={skipContentAction}
-        tabIndex={1}
+        tabIndex={0}
         href=''
         className={cn(styles.skipLink, {
           [styles.displayed]: isSkipLinkDisplayed,

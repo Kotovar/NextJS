@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, KeyboardEvent } from 'react';
 import styles from './Menu.module.css';
 import cn from 'classnames';
 import { AppContext } from '@/context/app.context';

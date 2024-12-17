@@ -44,7 +44,15 @@ export const ReviewForm = ({
         setError('Что-то пошло не так');
       }
     } catch (e) {
-      setError(e.message);
+      setError(
+        typeof e === 'object' &&
+          e &&
+          'message' in e &&
+          e.message &&
+          typeof e.message === 'string'
+          ? e.message
+          : 'Что-то пошло не так'
+      );
     }
   };
 
