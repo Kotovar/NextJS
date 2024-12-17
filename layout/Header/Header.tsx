@@ -3,13 +3,14 @@ import styles from './Header.module.css';
 import cn from 'classnames';
 import Logo from '../logo.svg';
 import { ButtonIcon } from '@/components';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 export const Header = ({ className, ...props }: HeaderProps) => {
   const [isOpened, setIsOpened] = useState(false);
+  const shouldReducerMotion = useReducedMotion();
   const router = useRouter();
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export const Header = ({ className, ...props }: HeaderProps) => {
       },
     },
     closed: {
-      opacity: 0,
+      opacity: shouldReducerMotion ? 1 : 0,
       x: '100%',
     },
   };
@@ -33,6 +34,7 @@ export const Header = ({ className, ...props }: HeaderProps) => {
   return (
     <header className={cn(className, styles.header)} {...props}>
       <Logo />
+
       <ButtonIcon
         appearance='white'
         icon='menu'
