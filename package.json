@@ -7,7 +7,7 @@
     "dev": "next dev",
     "export": "next export",
     "debug": "set NODE_OPTIONS=--inspect && next dev",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint",
     "stylelint": "stylelint \"**/*.css\" --fix"
