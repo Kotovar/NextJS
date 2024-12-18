@@ -8,7 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create .env.production file
+        run: echo "${{ secrets.ENV_FILE_CONTENT }}" > .env.production
+
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v4
         with:
