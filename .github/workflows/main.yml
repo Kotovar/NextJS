@@ -17,8 +17,8 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v4
         with:
-          registry: https://ghcr.io
-          name: https://ghcr.io/Kotovar/NextJS/NextJS
+          registry: ghcr.io
+          name: ghcr.io/Kotovar/NextJS/NextJS
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: 'develop'
