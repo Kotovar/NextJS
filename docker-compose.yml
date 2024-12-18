@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: next-app
+    image: ghcr.io/kotovar/nextjs/nextjs:develop
     container_name: next-app
     restart: always
     ports:
